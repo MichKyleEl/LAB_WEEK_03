@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,6 +23,7 @@ class ListFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
 
 //    private lateinit var coffeeListener: CoffeeListener;
 
@@ -58,7 +60,9 @@ class ListFragment : Fragment() {
         val coffeeList = listOf<View>(
             view.findViewById(R.id.affogato),
             view.findViewById(R.id.americano),
-            view.findViewById(R.id.latte)
+            view.findViewById(R.id.latte),
+            view.findViewById(R.id.cappuccino),
+            view.findViewById(R.id.macchiato)
         )
 //        coffeeList.forEach{
 //            it.setOnClickListener(this)
@@ -66,6 +70,7 @@ class ListFragment : Fragment() {
         coffeeList.forEach{ coffee ->
             val fragmentBundle = Bundle()
             fragmentBundle.putInt(COFFEE_ID, coffee.id)
+
             coffee.setOnClickListener(
                 Navigation.createNavigateOnClickListener(
                     R.id.coffee_id_action, fragmentBundle)

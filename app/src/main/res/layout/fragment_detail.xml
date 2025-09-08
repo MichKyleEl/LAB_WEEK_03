@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".DetailFragment">
+
     <TextView
         android:id="@+id/coffee_title"
         android:layout_width="match_parent"
@@ -25,4 +26,11 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         tools:text="@string/affogato_desc" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginTop="20dp" />
 </LinearLayout>
